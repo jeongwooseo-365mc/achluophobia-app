@@ -18,6 +18,8 @@ const state = await evaluate(`JSON.stringify({
   scripts: [...document.scripts].map(s => s.src.split('/').pop() || '(inline)'),
   visibleScreens: [...document.querySelectorAll('.screen')].filter(s => !s.hidden).map(s => s.id),
   babylon: typeof BABYLON, net: typeof Net, capacitor: typeof Capacitor,
+  safeL: document.documentElement.style.getPropertyValue('--safe-l'), safeR: document.documentElement.style.getPropertyValue('--safe-r'),
+  viewport: innerWidth + 'x' + innerHeight, loginLeft: (document.getElementById('login') || document.body).getBoundingClientRect().left,
   bodyStart: document.body ? document.body.innerHTML.slice(0, 600) : null,
 })`);
 console.log('state:', state);
