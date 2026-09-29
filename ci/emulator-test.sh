@@ -4,6 +4,7 @@ set -x
 mkdir -p out
 adb install -r achluophobia.apk
 adb logcat -c
+adb shell settings put secure immersive_mode_confirmations confirmed   # 전체 화면 안내 팝업 끄기
 adb shell am start -W -n kr.nee.achluophobia/.MainActivity
 for t in 15 30 60; do
   sleep 15
