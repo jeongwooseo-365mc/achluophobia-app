@@ -1,0 +1,22 @@
+{
+  "name": "achluophobia-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "아클루오포비아 앱 포장 (Windows: Tauri, Android: Capacitor). 게임 본체는 https://nee.n-e.kr/school/client/ 를 불러옴",
+  "scripts": {
+    "icons": "tauri icon icon.png && capacitor-assets generate --android --iconBackgroundColor #05070b --iconBackgroundColorDark #05070b --splashBackgroundColor #05070b --splashBackgroundColorDark #05070b",
+    "win": "tauri build",
+    "android:sync": "cap sync android",
+    "android": "cap sync android && cd android && gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/core": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.0.0",
+    "@tauri-apps/cli": "^2.0.0"
+  }
+}

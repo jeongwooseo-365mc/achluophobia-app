@@ -1,0 +1,12 @@
+{
+  "appId": "kr.nee.achluophobia",
+  "appName": "아클루오포비아",
+  "webDir": "web",
+  "server": {
+    "url": "https://nee.n-e.kr/school/client/",
+    "androidScheme": "https"
+  },
+  "android": {
+    "backgroundColor": "#05070b"
+  }
+}
